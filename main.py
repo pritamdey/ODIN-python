@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import chi2, kde
-from ODIN import logistic_fit as fit
+from ODIN import ODIN as fit
 from ODIN import helper_functions as helper
 data_path = 'data/'
 
@@ -12,7 +12,7 @@ X = helper.make_x(x_meta)
 
 # The connectomes are stored as vectors of the
 # lower triangular part of the adjacency matrix row by row
-A = np.array(pd.read_csv(data_path+'A_example.csv', dtype='int32'))
+A = np.array(pd.read_csv(data_path+'A.csv', dtype='int32'))
 N = A.shape[1]
 
 #####################################################################################################
