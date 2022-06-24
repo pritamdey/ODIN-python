@@ -13,4 +13,4 @@ The repository contains the directory data which contains a toy dataset for fitt
 - simulation_ownmodel_sen_spe.py can be used to generate the sensitivity/specificity table shown for our model in the paper.
 - main.py shows the step by step fitting of our model
 
-There is also an R implementation of this project [here](https://github.com/ODIN-r).
+There is also an R implementation of this project [here](https://github.com/pritamdey/ODIN-r).
