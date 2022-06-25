@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-from scipy.stats import cauchy
 from . import helper_functions as helper
 
 
@@ -29,7 +28,7 @@ def gen_connectomes(n, n_lobe=5, nodes_per_lobe=7):
     x = helper.make_x(make_lobe_hemi_matrix(n_lobe, nodes_per_lobe))
     l = x.shape[0]
     p = x.shape[1]
-    z = cauchy.rvs(loc=0, scale=1, size=l)
+    z = np.random.standard_cauchy(size=l)
     bet = np.random.normal(loc=0.0, scale=1.0, size=p*n).reshape(p, n)
     b = expit(z.reshape(l, 1) + np.matmul(x, bet))
     a = np.random.binomial(1, b)
