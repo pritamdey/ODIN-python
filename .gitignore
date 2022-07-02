@@ -1,3 +1,5 @@
 # Default ignored files
 /.idea/
 /start_jupyter.bat
+/data/A.csv
+/data/subjectIDs.txt
