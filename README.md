@@ -8,7 +8,6 @@ The repository contains the directory data which contains a toy dataset for fitt
 - ODIN: This package contains the implementation. It has the following modules. The main functionality is bundled in
   the class ODIN. The method fit_and_detect_outliers of the ODIN class fits the model, calculates the influence measures and calculates the thresholds to classify outliers.
 - main.py shows the step by step fitting of our model
-- main.ipynb is a jupyter notebook with the same content as main.py
 - simulation_runtime.py does the runtime simulations shown in our paper
 - simulation_ownmodel_boxplots.py generates the boxplots in our paper
 - simulation_ownmodel_sen_spe.py can be used to generate the sensitivity/specificity table shown for our model in the paper.

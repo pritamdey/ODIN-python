@@ -1,4 +1,4 @@
-from . import make_x
+from .make_x import make_x
 from .math_functions import *
 from .mat_vec_transforms import matricize_all, half_vectorize_all
 
@@ -13,7 +13,7 @@ def sim(n, n_lobe=5, nodes_per_lobe=7):
     hemi_locations = ['L'] * nodes_per_hemi + ['R'] * nodes_per_hemi
     lobe0 = [str(int(i / nodes_per_lobe)) for i in range(nodes_per_hemi)]
     lobe_locations = lobe0 + lobe0
-    x = make_x.make_x(lobe_locations, hemi_locations)
+    x = make_x(lobe_locations, hemi_locations)
     l = x.shape[0]
     p = x.shape[1]
     z = np.random.standard_cauchy(size=l)

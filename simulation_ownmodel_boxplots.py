@@ -17,7 +17,6 @@ def box_plot_sims(pro):
 
 
 def plot_box_plot(infl):
-    pro = infl[2]
     infl = infl[0:2]
     plt.clf()
     plt.rcParams["figure.figsize"] = (5, 5)

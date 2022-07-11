@@ -1,16 +1,18 @@
 import numpy as np
 
 
+def level_matrix(num):
+    level_mat = np.zeros((num, num), dtype='int32')
+    ss = 1
+    for ii in range(num):
+        for jj in range(ii + 1):
+            level_mat[ii, jj] = ss
+            level_mat[jj, ii] = ss
+            ss += 1
+    return level_mat
+
+
 def make_x(lobes, hemis):
-    def level_matrix(num):
-        level_mat = np.zeros((num, num), dtype='int32')
-        ss = 1
-        for ii in range(num):
-            for jj in range(ii + 1):
-                level_mat[ii, jj] = ss
-                level_mat[jj, ii] = ss
-                ss += 1
-        return level_mat
     v = len(lobes)
     hem_names = list(set(hemis))
     hem_names.sort()
